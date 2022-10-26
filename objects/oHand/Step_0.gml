@@ -37,21 +37,11 @@ if (keyboard_check_pressed(ord("F"))) {
 
 // Select Card
 if (keyboard_check_pressed(ord("T"))) {
-	// Check if card is already selected
-	for (var i=0; i<maxCardsInPlay; ++i) { // Run through all values in array
-		if (c[i] == cardSelected) {
-			// Reset to basic value if already selected
-			c[i] = -1;
-			cardsHeld --;
-		}
-	}
-	
-	// Play Card if not already Selected
-	c[cardsHeld] = cardSelected;
-	cardsHeld ++;
-	cardsHeld = clamp(cardsHeld, 0, 2);
-	
+	scrSelectCard(cardSelected);
 }
+
+
+
 
 /* Select Card 
 if (keyboard_check_pressed(ord("T"))) {

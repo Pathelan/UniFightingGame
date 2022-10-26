@@ -9,9 +9,14 @@ handSize = 0; // Amount of Cards that will be played in the hand
 maxHandSize = 5; // Maximum amount of Cards that can be in the hand at one time.
 maxCardsInPlay = 2; // (Add 1 since Arrays start at 0) How many cards can be played at once.
 
+//Draw Vars
+cardX = 500;
+cardXMultiplier = 144;
+cardY = 700;
+cardColour = c_white;
+
 // UI
 cardSelected = 0;
-
 
 // Cards
 cardsHeld = 0;
