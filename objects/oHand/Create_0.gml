@@ -10,10 +10,11 @@ maxHandSize = 5; // Maximum amount of Cards that can be in the hand at one time.
 maxCardsInPlay = 2; // (Add 1 since Arrays start at 0) How many cards can be played at once.
 
 //Draw Vars
-cardX = 500;
-cardXMultiplier = 144;
+cardX = 350;
+cardXMultiplier = 240;
 cardY = 700;
 cardColour = c_white;
+cardScale = 1;
 
 // UI
 cardSelected = 0;
@@ -26,9 +27,6 @@ c[2] = -1;
 
 // Add Cards to hand
 alarm[0] = room_speed;
-
-// Shuffle Deck every 10 seconds
-alarm[1] = room_speed*10;
 
 
 // Card Data

@@ -10,23 +10,32 @@ if (g.phase == battlePhase.pDraw)
 		{ 
 				// Highlight Selected Card
 				if (cardSelected == i) {
-					cardY = 700;
+					// Draw Highlighted CArd
+					cardY = 650;
 					cardColour = c_yellow;
+					cardScale = 1.15; // Increase size of selected card
+					draw_text((cardX + i*cardXMultiplier) + 125, cardY - 72, CardText(hand[|i]));
 				}else{
 					// Draw other cards normally
 					cardY = 700;
-					cardColour = c_white;	
+					cardColour = c_white;
+					cardScale = 1; // Draw at normal size
 				}
 				
 				// Highlight Played Card
 				for (var j=0; j<=maxCardsInPlay; j++) {
 					if (c[j] == i) {
 						cardY = 600
-						cardColour = c_red;
+						cardColour = c_maroon;
+						cardScale = 1;
 					}
 				}
-				draw_sprite_ext(sCard, hand[|i], cardX + i*cardXMultiplier, cardY, 2, 2, 0, cardColour, 1);	
+				draw_sprite_ext(sCard, hand[|i], cardX + i*cardXMultiplier, cardY, cardScale, cardScale, 0, cardColour, 1);	
 			}
+	}
+} else if (g.phase == battlePhase.pAttack) {
+	for (var l=0; l<=maxCardsInPlay; l++) {
+		draw_sprite_ext(sCard, hand[|l], 100, 200+(200*l), 0.5, 0.5, 0, c_white, 1);		
 	}
 }
 

@@ -9,7 +9,6 @@ if (keyboard_check_pressed(vk_space)) {
 		case battlePhase.pDraw:
 			phase = battlePhase.pAttack; // Set Phase
 			phaseText = "Attack Phase"; // Set text
-			scrShuffleHand(); // Shuffle Hand
 			break;
 			
 			
@@ -17,6 +16,12 @@ if (keyboard_check_pressed(vk_space)) {
 			phase = battlePhase.pDraw; // Set Phase
 			phaseText = "Draw Phase"; // Set Text
 			scrShuffleHand(); // Shuffle Hand
+			with (oHand) { // Reset Hand when turning to draw phase
+				for (var k=0; k<maxCardsInPlay+1; k++) {
+					c[k] = -1;	
+				}
+			}
+			
 			break;
 	}
 }
