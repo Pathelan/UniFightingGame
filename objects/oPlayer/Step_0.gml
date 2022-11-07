@@ -1,5 +1,6 @@
 /// @description Step
 
+
 // Smooth Player Damage
 if (smoothHealth == true) {
 	if (playerLastHealth > playerHealth) {

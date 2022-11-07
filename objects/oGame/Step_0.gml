@@ -1,5 +1,11 @@
 /// @description Step
 
+// Parallax Backgrounds
+layer_x(bgClose,	-lerp(0, oCamera.x, 20)	);
+layer_x(bgMid,		-lerp(0, oCamera.x, 30)	);
+layer_x(bgFar,		-lerp(0, oCamera.x, 50)	);
+
+var camX = camera_get_view_x(view_camera[0]);
 
 
 // --=== Debug ==--
