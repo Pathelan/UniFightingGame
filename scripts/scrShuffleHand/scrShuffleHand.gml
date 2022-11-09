@@ -10,4 +10,13 @@ function scrShuffleHand() {
 				alarm[0] = room_speed/2;
 		}
 	}
+	
+	// Shuffle Enemy Hand
+	if (instance_exists(oEnemyHand)) {
+		with (oEnemyHand) { // Run code through the Hand Object
+			
+				// Shuffle Hand and reset number of cards.
+				ds_list_shuffle(oEnemyHand.eHand);
+		}
+	}
 }

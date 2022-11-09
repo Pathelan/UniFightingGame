@@ -16,6 +16,12 @@ cardY = 700;
 cardColour = c_white;
 cardScale = 1;
 
+// Dice Variables
+diceRoll = false;
+diceNumber = 0;
+diceTimer = 0; // How Long the Dice initially Rolls for
+diceDraw = false;
+
 // UI
 cardSelected = 0;
 

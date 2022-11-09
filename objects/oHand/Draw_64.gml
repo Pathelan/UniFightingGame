@@ -1,6 +1,6 @@
 /// @description Draw Cards
 
-// Only Draw hand if it is the Draw Phase
+#region // Only Draw hand if it is the Draw Phase
 if (g.phase == battlePhase.pDraw) 
 {
 	// Draw Cards equal to amount in Hand
@@ -10,7 +10,7 @@ if (g.phase == battlePhase.pDraw)
 		{ 
 				// Highlight Selected Card
 				if (cardSelected == i) {
-					// Draw Highlighted CArd
+					// Draw Highlighted Card
 					cardY = 650;
 					cardColour = c_yellow;
 					cardScale = 1.15; // Increase size of selected card
@@ -28,6 +28,7 @@ if (g.phase == battlePhase.pDraw)
 						cardY = 600
 						cardColour = c_maroon;
 						cardScale = 1;
+						draw_text((cardX + i*cardXMultiplier) + 125, cardY+350, j+1);
 					}
 				}
 				draw_sprite_ext(sCard, hand[|i], cardX + i*cardXMultiplier, cardY, cardScale, cardScale, 0, cardColour, 1);	
@@ -38,6 +39,32 @@ if (g.phase == battlePhase.pDraw)
 		draw_sprite_ext(sCard, hand[|l], 100, 200+(200*l), 0.5, 0.5, 0, c_white, 1);		
 	}
 }
+#endregion
+
+#region// Dice Roll
+if (diceDraw == true) {
+	
+	// Dice Variables
+	var dScale = 1;
+	
+	if (diceRoll == false) {
+		dScale = 1.25;
+		if (dScale > 1) { // Reduce dice scale after roll ends
+			dScale = (0.00888*alarm[1])+1;	
+		}
+	}
+	
+	// Draw Dice
+	if (diceRoll == true) {
+		draw_sprite_ext(sprD20, irandom_range(1, 20), 960, 400, dScale, dScale, 0, c_white, 1);
+	} else {
+		draw_sprite_ext(sprD20, string(diceNumber-1), 960, 400, dScale, dScale, 0, c_white, 1);
+	}
+	
+}
+
+#endregion
+
 
 draw_text(x+64, y, handSize);
 draw_text(64+x, y+16, maxHandSize);
@@ -47,3 +74,5 @@ draw_text(x+32, y+64, c[0]);
 draw_text(x+64, y+64, c[1]);
 draw_text(x+96, y+64, c[2]);
 draw_text(x+96, y+80, cardsHeld);
+
+draw_text(x+96, y+96, alarm[1]);

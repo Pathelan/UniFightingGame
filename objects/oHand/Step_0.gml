@@ -1,5 +1,17 @@
 /// @description Step
 
+// Roll Dice
+if (diceRoll == true && diceTimer > 0) {
+	
+	diceTimer--;
+} else if (diceRoll == true && diceTimer <= 0) {
+	if (diceRoll == true) {
+		diceNumber = irandom_range(1, 20);
+	}
+	diceRoll = false;
+	alarm[1] = room_speed*2;
+}
+
 
 
 // --== Debug ==--
@@ -35,7 +47,17 @@ if (keyboard_check_pressed(ord("S"))) {
 	c[2] = -1;
 }
 
-
+// Roll Dice
+if (keyboard_check_pressed(ord("H"))) {
+	diceRoll = true;
+	diceDraw = true;
+	diceTimer = room_speed*.75;
+	var snd = choose(sfxDiceRoll1, sfxDiceRoll2);
+	audio_play_sound(snd, 10, false);
+	
+	// Dice Sound 1: https://freesound.org/people/John_Dark_Souls/sounds/618288/
+	// Dice Sound 2: https://freesound.org/people/Aesterial-Arts/sounds/633852/
+}
 
 
 /* Select Card 
