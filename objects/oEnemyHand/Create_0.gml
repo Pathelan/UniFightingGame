@@ -11,6 +11,11 @@ c[2] = 3;
 // Card Variables
 maxCardsInPlay = 2; // (Add 1 since Arrays start at 0) How many cards can be played at once.
 
+// Dice Variables
+diceRoll = false;
+diceNumber = 0;
+diceTimer = 0; // How Long the Dice initially Rolls for
+diceDraw = false;
 
 // Card Data
 eHand = ds_list_create();

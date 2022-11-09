@@ -3,9 +3,25 @@
 
 
 // Player Variables
-playerMaxHealth = 20;
+playerMaxHealth = 40;
 playerHealth = playerMaxHealth;
 playerLastHealth = playerHealth;
+
+// Attack Variables
+playerAttack = 0;
+playerFocus = false;
+playerRecoil = false;
+playerPunchConsecutive = 0;
+
+
+// WORK ON CARD ATTACKS TOMORROW
+
+
+// Defence Variables
+playerDefence = 0;
+playerDodge = false;
+playerGrab = false;
+
 
 // Draw Variables
 smoothHealth = false;

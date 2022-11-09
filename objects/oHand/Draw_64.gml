@@ -55,8 +55,11 @@ if (diceDraw == true) {
 	}
 	
 	// Draw Dice
-	draw_sprite_ext(sprD20, string(diceNumber-1), 500, 500, dScale, dScale, 0, c_white, 1);
-	
+	if (diceRoll == true) {
+		draw_sprite_ext(sprD20, irandom_range(1, 20), 960, 400, dScale, dScale, 0, c_white, 1);
+	} else {
+		draw_sprite_ext(sprD20, string(diceNumber-1), 960, 400, dScale, dScale, 0, c_white, 1);
+	}
 	
 }
 

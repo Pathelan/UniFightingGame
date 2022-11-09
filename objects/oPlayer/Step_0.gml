@@ -1,5 +1,7 @@
 /// @description Step
 
+// Clamp Health
+playerHealth = min(playerMaxHealth, playerHealth);
 
 // Smooth Player Damage
 if (smoothHealth == true) {

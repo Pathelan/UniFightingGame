@@ -1,4 +1,7 @@
 /// @description Initialise Variables
+p = oPlayer;
+e = oEnemy;
+
 
 // Parallax Variables
 bgClose = layer_get_id("bgForestClose");
@@ -21,5 +24,8 @@ maxCombatPhases = 6;
 phaseAlarm = false;
 enemyAttack = false;
 reduceHealth = true;
+
+pAttackDone = false; // If player's attack has been done
+eAttackDone = true; // If enemy's attack has been done
 
 lastAttack = "";
