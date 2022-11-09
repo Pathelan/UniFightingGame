@@ -4,7 +4,7 @@
 // Smooth Player Damage
 if (smoothHealth == true) {
 	if (playerLastHealth > playerHealth) {
-		playerLastHealth = floor(lerp(playerLastHealth, playerHealth, 0.075));
+		playerLastHealth = floor(lerp(playerLastHealth, playerHealth, 0.025));
 	} else if (playerLastHealth <= playerHealth) {
 		smoothHealth = false;	
 	}
@@ -33,14 +33,12 @@ if (keyboard_check(ord("R"))) {
 
 // Take Damage
 if (keyboard_check_pressed(ord("X"))) {
-	playerHealth -= 10;
-	alarm[0] = room_speed/2;
+	playerHealth -= 2;
 }
 
 // Take More Damage
 if (keyboard_check_pressed(ord("Z"))) {
-	playerHealth -= 25;
-	alarm[0] = room_speed/2;
+	playerHealth -= 5;
 }
 
 // Heal Player

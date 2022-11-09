@@ -10,7 +10,7 @@ if (g.phase == battlePhase.pDraw)
 		{ 
 				// Highlight Selected Card
 				if (cardSelected == i) {
-					// Draw Highlighted CArd
+					// Draw Highlighted Card
 					cardY = 650;
 					cardColour = c_yellow;
 					cardScale = 1.15; // Increase size of selected card

@@ -3,7 +3,7 @@
 
 
 // Player Variables
-playerMaxHealth = 100;
+playerMaxHealth = 20;
 playerHealth = playerMaxHealth;
 playerLastHealth = playerHealth;
 

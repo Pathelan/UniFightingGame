@@ -9,3 +9,4 @@ draw_text(camMidX, camMidY, phaseText);
 
 draw_text(100, 400, lerp(0, camera_get_view_x(view_camera[0]), 1));
 
+draw_text(500, 128, lastAttack);
