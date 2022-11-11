@@ -25,14 +25,3 @@ if (instance_exists(oPlayer)) {
 // Smoothly move towards target
 x += ((targetX - x)*.05);
 y += ((targetY - y)*.05);
-
-
-// --== Debug ==--
-
-if (keyboard_check_pressed(ord("A"))) {
-	target = oPlayer; // Switch Target towards Player
-}
-
-if (keyboard_check_pressed(ord("D"))) {
-	target = oEnemy; // Switch Target towards Player
-}

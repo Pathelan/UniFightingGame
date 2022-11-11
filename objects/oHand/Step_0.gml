@@ -12,9 +12,15 @@ if (diceRoll == true && diceTimer > 0) {
 	alarm[1] = room_speed*2;
 }
 
+// Start Attack Phase
 
-
-// --== Debug ==--
+if (keyboard_check_pressed(vk_space) && c[0] != -1 && c[1] != -1 && c[2] != -1) { // Check if All Cards have been selected
+	with (g) { // In oGame
+		if (phase != battlePhase.pAttack) {
+			phase = battlePhase.pAttack; // Set Phase to Battle if it isn't already set
+		}
+	}
+}
 
 
 // Increase Selected Card Size
@@ -47,27 +53,7 @@ if (keyboard_check_pressed(ord("S"))) {
 	c[2] = -1;
 }
 
-// Roll Dice
-if (keyboard_check_pressed(ord("H"))) {
-	diceRoll = true;
-	diceDraw = true;
-	diceTimer = room_speed*.75;
-	var snd = choose(sfxDiceRoll1, sfxDiceRoll2);
-	audio_play_sound(snd, 10, false);
-	
-	// Dice Sound 1: https://freesound.org/people/John_Dark_Souls/sounds/618288/
-	// Dice Sound 2: https://freesound.org/people/Aesterial-Arts/sounds/633852/
-}
-
-
-/* Select Card 
-if (keyboard_check_pressed(ord("T"))) {
-	if (CheckArray(array_get(c), cardSelected)) {
-			
-	}
-}*/
-
-// Shuffle
-if (keyboard_check_pressed(ord("R"))) {
-	ds_list_shuffle(hand);
+if (playerDeath == true || enemyDeath == true && keyboard_check_pressed(vk_space)) {
+	// Reset Game
+	game_restart();
 }

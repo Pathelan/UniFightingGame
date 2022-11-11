@@ -18,7 +18,7 @@ enum battlePhase{
 }
 
 // Phases Variables
-currentCombatPhase = 0;
+currentCombatPhase = 1;
 maxCombatPhases = 6;
 
 phaseAlarm = false;

@@ -9,8 +9,6 @@ if (g.phase == battlePhase.pAttack) {
 	}
 }
 
-draw_text(500, 64, cWidth);
-
 #region// Dice Roll
 if (diceDraw == true) {
 	

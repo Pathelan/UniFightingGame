@@ -11,7 +11,8 @@ if (enemyLastHealth - enemyHealth >= 10) {
 }
 
 if ((enemyHealth-enemyLastHealth) < 0) {
-	draw_text(x, y-128, enemyHealth - enemyLastHealth);
+	draw_text(x, y-128, round(enemyHealth - enemyLastHealth));
 }
 
 draw_sprite_ext(sprHealthbarInner, 0, x-36, y-96, max(enemyHealth/enemyMaxHealth, 0), 1, 0, c_white, 1);
+draw_sprite_ext(sprDefenceInner, 0, x-36, y-96, max(enemyDefence/10, 0), 1, 0, c_white, 1);
