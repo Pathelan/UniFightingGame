@@ -101,7 +101,7 @@ if (enemyDeath == true) {
 	draw_text(960, 540, playerWinText);
 	
 	// Credits
-	draw_text(160, 64, creditsText);
+	draw_text(192, 64, creditsText);
 }
 
 // Lose Condition
@@ -119,5 +119,5 @@ if (playerDeath == true) {
 	draw_text(960, 540, enemyWinText);
 	
 	// Credits
-	draw_text(160, 64, creditsText);
+	draw_text(192, 64, creditsText);
 }

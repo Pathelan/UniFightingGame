@@ -53,7 +53,7 @@ if (keyboard_check_pressed(ord("S"))) {
 	c[2] = -1;
 }
 
-if (playerDeath == true || enemyDeath == true && keyboard_check_pressed(vk_space)) {
+if (playerDeath == true && keyboard_check_pressed(vk_space) || enemyDeath == true && keyboard_check_pressed(vk_space)) {
 	// Reset Game
 	game_restart();
 }

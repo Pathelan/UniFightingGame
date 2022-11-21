@@ -25,7 +25,7 @@ enemyWinText = choose(
 );
 
 // Credits
-creditsText = "Producer - Josephine B\nProgramming - Ashe L\nMenu - Ethan S\nUI Art - Bailey O'H\nCharacter Art - Flynn C\nSong: Kikuo - Boy Sorcerer";
+creditsText = "Producer - Josephine B\nProgramming - Ashe L\nMenu - Ethan S\nUI Art - Bailey O'H\nCharacter Art - Flynn C\nBackground Art - Ryan W.\nSong: Kikuo - Boy Sorcerer";
 
 //Draw Vars
 cardX = 350;

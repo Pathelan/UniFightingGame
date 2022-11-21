@@ -8,7 +8,7 @@ if (drawCards == false) { // Check if Cards Deck is already drawn
 			if (mouse_check_button(mb_left)) { // Change Sprite to pressed
 				bStart = 2;
 			} else if (mouse_check_button_released(mb_left)) {
-					room_goto(rmBattle); // Go to Battle Room
+					room_goto(choose(rmBattle, rmBattle2)); // Go to Battle Room
 					if (!audio_is_playing(sndFight)) {
 						audio_play_sound(sndFight, 10, true);
 					}
